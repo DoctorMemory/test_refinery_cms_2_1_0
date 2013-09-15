@@ -22,6 +22,14 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+# for deployment on Heroku
+gem "heroku"
+
+group :production do
+  gem 'pg'
+  gem 'thin'
+end
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
@@ -49,8 +57,5 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'
 
-# use PostgreSQL  in production
-# this didn't work so well, so in the interest of time, lets try putting SQLite into prod on heroku
-#gem 'pg'
-  gem 'sqlite3'
-  
+
+
