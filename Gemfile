@@ -49,6 +49,8 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'
 
-# use PostgreSQL  in produciton
-gem 'pg'
-
+# use PostgreSQL  in production
+# this didn't work so well, so in the interest of time, lets try putting SQLite into prod on heroku
+#gem 'pg'
+  gem 'sqlite3'
+  
